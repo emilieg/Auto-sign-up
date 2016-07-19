@@ -1,0 +1,23 @@
+{
+  "name": "auto-sign-up",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilieg/Auto-sign-up.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilieg/Auto-sign-up/issues"
+  },
+  "homepage": "https://github.com/emilieg/Auto-sign-up#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "request": "^2.73.0"
+  }
+}
