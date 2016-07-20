@@ -18,7 +18,9 @@
   "homepage": "https://github.com/emilieg/Auto-sign-up#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "ejs": "^2.4.2",
     "express": "^4.14.0",
+    "express-ejs-layouts": "^2.2.0",
     "request": "^2.73.0"
   }
 }
