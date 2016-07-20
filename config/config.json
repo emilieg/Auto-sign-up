@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "auto_sign_up",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "auto_sign_up",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "auto_sign_up",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
