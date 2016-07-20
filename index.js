@@ -3,11 +3,17 @@ var request = require('request');
 var app = express();
 var bodyParser = require('body-parser');
 var ejsLayouts = require('express-ejs-layouts');
+var session = require('session');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
+app.use(session({
+  secret: 'test',
+  resave: false,
+  saveUninitialized: true
+}));
 
 
 app.get('/', function(req, res) {
