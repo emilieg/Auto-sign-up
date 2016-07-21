@@ -24,29 +24,43 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req,res) {
+  console.log("req.body: ", req.body);
+  console.log("typeof: ", typeof req.body);
+
+  for (var user in req.body) {
+  console.log("person's name:", req.body.name);
   db.user.findOrCreate({
     where: {
-    name: req.body.name
+    name: user.name
+
   },
     defaults: {
-      email: req.body.email,
-      password: req.body.password
+      email: user.email,
+      password: user.password
     }
   }).spread(function(user, created) {
-    console.log("created");
+    console.log(created);
   }).catch(function(err) {
     res.send(err)
   });
   // res.send('posting');
   // console.log(req.body);
+  }
 });
 //using the request.post method 
 request.post({url:'http://localhost:3000',
   form: {
-    name: 'Emilie',
-    email: 'emilie@gmail.com',
+    name: 'Lena', 
+    email: 'lena@gmail.com',
     password: 'summertime',
-  }}, function(err, res, body){
+  }
+  // ,
+  // {
+  //   name: 'Lisa', 
+  //   email: 'lisa@gmail.com',
+  //   password: 'summertime',
+  // }
+  }, function(err, res, body){
     if(err) {
       console.log("there was an ERROR: ", err);
     } else {
